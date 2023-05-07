@@ -9,7 +9,8 @@ import smtplib
 from pathlib import Path
 
 sa = gspread.service_account()
-sh = sa.open("test test")
+# make sure to change spreadsheet name depending on year/whatever
+sh = sa.open("INSERT GOOGLE SPREADSHEET NAME HERE")
 kraken_roster = sh.worksheet("Kraken")
 kraken_roster.batch_clear(["D3:J40"])
 
